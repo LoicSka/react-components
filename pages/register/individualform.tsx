@@ -53,10 +53,7 @@ const schema = yup
       .string()
       .required('Phone number is required')
       .max(100),
-    country: yup
-      .string()
-      .required('Country is required')
-      .max(100)
+    // country: yup   .string()   .required('Country is required')   .max(100)
   });
 
 interface Props {
@@ -163,7 +160,7 @@ export const IndividualRegiterForm = (props : Props) => {
         <SelectField.Label>Country *</SelectField.Label>
         <SelectField
           ref={register({required: true})}
-          name='country'
+          name='residence'
           className='mt-3'
           value={country}
           onChange={(event, _value) => {
